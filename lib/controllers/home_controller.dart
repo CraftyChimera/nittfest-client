@@ -21,8 +21,9 @@ class HomeController extends GetxController with StateMixin<ResourceResponse> {
   final storage = Get.find<StorageServices>();
   ImageProvider bg = const AssetImage('bg2.webp');
   var currentPointer = const Offset(0, 0);
-  var center = const Offset(0, 0);
+  var center = const Offset(217.0, 208.9);
   var startAngle = 0.0.obs;
+  var diffAngle = 0.0.obs;
   var choosenTeam = 'A/V';
 
   List<TeamDataModel> data = [
@@ -44,14 +45,18 @@ class HomeController extends GetxController with StateMixin<ResourceResponse> {
       if (direction > 0) {
         if (startAngle.value + theta > 2 * pi) {
           startAngle.value += theta - 2 * pi;
+          diffAngle.value = theta - 2 * pi;
         } else {
           startAngle.value += theta;
+          diffAngle.value = theta;
         }
       } else if (direction < 0) {
         if (startAngle.value - theta < 0) {
           startAngle.value -= theta - 2 * pi;
+          diffAngle.value = theta - 2 * pi;
         } else {
           startAngle.value -= theta;
+          diffAngle.value = -theta;
         }
       }
       currentPointer += center + details.delta;

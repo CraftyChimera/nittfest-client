@@ -24,22 +24,23 @@ class Content extends StatelessWidget {
         mainAxisAlignment: mainAxisAlignment,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
+          SizedBox(height: gapSize),
           Image.asset(
             'assets/logo_nf.png',
             color: AppTheme.bodycolor,
             height: logoSize,
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: gapSize),
           Text(
             'INDUCTIONS',
-            style: GoogleFonts.poppins(
+            style: GoogleFonts.sanchez(
                 fontSize: headerSize,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 6,
                 shadows: AppTheme.shadows,
                 color: AppTheme.bodycolor),
           ),
-          SizedBox(height: gapSize),
+          SizedBox(height: gapSize2),
           Text(
             'The Battle Of Departments',
             style: GoogleFonts.poppins(

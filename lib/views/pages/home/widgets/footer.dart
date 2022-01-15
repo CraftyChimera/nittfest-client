@@ -7,14 +7,12 @@ class Footer extends StatelessWidget {
   const Footer({Key? key, required this.size}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Center(
-        child: Text(
-          'Made with 💚 by DeltaForce & Graphique',
-          style: GoogleFonts.lato(
-              fontWeight: FontWeight.bold,
-              fontSize: size,
-              shadows: AppTheme.shadows,
-              color: Colors.white70),
-        ),
+  Widget build(BuildContext context) => Text(
+        'Made with 💚 by DeltaForce',
+        style: GoogleFonts.lato(
+            fontWeight: FontWeight.bold,
+            fontSize: size,
+            shadows: AppTheme.shadows,
+            color: Colors.white70),
       );
 }
