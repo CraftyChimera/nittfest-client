@@ -102,8 +102,7 @@ class SocialIcons extends StatelessWidget {
           alignment: Alignment.bottomLeft,
           children: <Widget>[
             IconButton(
-                icon: Image.asset('assets/call.png',
-                    height: 45, color: Colors.white),
+                icon: const Icon(Icons.phone, color: Colors.white),
                 onPressed: _contactDialog),
             IconButton(
                 icon: Image.asset('assets/instagram.png',

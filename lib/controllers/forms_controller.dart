@@ -140,7 +140,7 @@ class FormsController extends GetxController with StateMixin<QuestionResponse> {
                           style: TextStyle(
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.bold,
-                            fontSize: 40.0,
+                            fontSize: 30.0,
                             shadows: [
                               Shadow(
                                 offset: Offset(5.0, 5.0),

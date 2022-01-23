@@ -10,7 +10,7 @@ ENV PATH="/flutter/bin:${PATH}"
 
 WORKDIR /app
 
-COPY pubspec.* ./
+# COPY pubspec.* ./
 
 RUN flutter channel stable &&\
     flutter config --no-enable-android \
@@ -20,12 +20,16 @@ RUN flutter channel stable &&\
     --no-enable-windows-uwp-desktop \
     --no-enable-ios &&\
     flutter config --enable-web &&\
-    flutter precache &&\
-    flutter pub get
+    flutter precache
+
+COPY pubspec.* ./
+
+RUN    flutter pub get
 
 COPY . .
 
-RUN flutter build web --release
+RUN flutter build web --web-renderer html --release
 
 FROM nginx:1.21.5-alpine
 COPY --from=build-env /app/build/web /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/default.conf

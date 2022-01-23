@@ -37,7 +37,7 @@ class FormsPagePhone extends StatelessWidget {
             .values
             .toList(),
       ),
-      const Positioned(bottom: 10, right: 10, child: CarouselNavigator())
+     // const Positioned(bottom: 10, right: 10, child: CarouselNavigator())
     ]);
   }
 }

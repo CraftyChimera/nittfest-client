@@ -1,6 +1,7 @@
 class ClientCredentials {
-  static const clientId = 'yjrYLUwMABmVt6nf';
-  static const redirectUri = 'http://localhost:8080/static.html';
-  static const state = 'afasf';
-  static const nonce = 'afa';
+  static const clientId = 'sPR1OZL9Cch291cW';
+  static const redirectUri = 'https://nittfest.org/static.html';
+  static const state = 'simple-state';
+  static const nonce = 'nonce';
 }
+
